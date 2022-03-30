@@ -6,7 +6,7 @@ import pytz
 ##############################
 STATUS = (
     ('active', 'Active'),
-    ('inactive', 'Inactive'),
+    ('inactive','Inactive'),
 )
 STATUS_DICT = dict(STATUS)
 

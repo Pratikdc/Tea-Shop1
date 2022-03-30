@@ -11,8 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('user_name', 'email', 'password',
-                  'token', 'token_expires_at')
+        fields = ('user_name', 'email', 'password', 'token', 'token_expires_at')
 
 
 class UserSignUpSerializer(serializers.ModelSerializer):
@@ -22,8 +21,7 @@ class UserSignUpSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('user_name', 'email', 'password',
-                  'token', 'token_expires_at')
+        fields = ('user_name', 'email', 'password', 'token', 'token_expires_at')
 
     # Override the create method
     def create(self, validated_data):
@@ -32,8 +30,7 @@ class UserSignUpSerializer(serializers.ModelSerializer):
 
         # Create a token
         validated_data['token'] = token_hex(30)
-        validated_data['token_expires_at'] = datetime.datetime.now(
-        ) + datetime.timedelta(days=7)
+        validated_data['token_expires_at'] = datetime.datetime.now() + datetime.timedelta(days=7)
 
         return super().create(validated_data)
 
@@ -47,8 +44,7 @@ class UserSignInSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('user_name', 'email', 'password',
-                  'token', 'token_expires_at')
+        fields = ('user_name', 'email', 'password', 'token', 'token_expires_at')
 
     # Override the create method
     def create(self, validated_data):
@@ -59,13 +55,11 @@ class UserSignInSerializer(serializers.ModelSerializer):
             # Token
             user[0].token = token_hex(30)
             # Token expires after 7 days
-            user[0].token_expires_at = datetime.datetime.now() + \
-                datetime.timedelta(days=7)
+            user[0].token_expires_at = datetime.datetime.now() + datetime.timedelta(days=7)
             user[0].save()
 
             # Return user information
             return user[0]
         else:
             # Raise error
-            raise serializers.ValidationError(
-                {"error": "The password or email is incorrect."})
+            raise serializers.ValidationError({"error": "The password or email is incorrect."})
