@@ -106,7 +106,8 @@ ul.items li {
   padding-bottom: 60px;
 }
 ul.items li img {
-  width: 30%;
+  width: 24%;
+  height: 255px;
   border-radius: 5%;
 }
 ul.items li .info {
