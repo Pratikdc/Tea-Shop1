@@ -126,7 +126,7 @@ ul.items li .info .name {
 }
 @media screen and (max-width: 900px) {
   ul.items li .info .name {
-    margin: -5% 0% 26% 10%;
+    margin: 0% 0% 26% 10%;
   }
 }
 ul.items li .info .info-bottom {
