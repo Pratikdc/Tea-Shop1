@@ -1,7 +1,7 @@
 # Tea-Shop1
 
 ```
-Tea Shop App, with a frontend built in React & Redux and a backend built in Django API.
+Tea Shop, with a frontend built in React & Redux and a backend built in Django API.
 ```
 
 ## Live Demo
