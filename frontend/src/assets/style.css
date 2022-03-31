@@ -121,7 +121,7 @@ ul.items li .info .name {
   font-weight: 700;
   font-size: 20px;
   color: #0a0202;
-  margin: 5% 0% 26% 5%;
+  margin: -5% 0% 26% 5%;
   font-family: rockwell;
 }
 @media screen and (max-width: 900px) {
