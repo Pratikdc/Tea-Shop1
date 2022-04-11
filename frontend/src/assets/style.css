@@ -73,9 +73,7 @@ header .header-links .img img {
   header .header-links .sign-in-link {
     padding: 5px 15px;
   }
-  ul.items li .info .name {
-    margin: -5% 0% 26% 10%;
-  }
+ 
 }
 .sign-in {
   font-family: Roboto;
@@ -114,20 +112,22 @@ ul.items li .info {
   width: 70%;
   position: relative;
   padding: 5px 15px;
-  /*float: right;*/
-  margin-top: -19%;
+  /* float: right; */
+  /* margin-top: -19%; */
+  display: inline-flex;
+  margin-left: 19%;
+  height: 6vh;
+  bottom: 54px;
+
 }
-ul.items li .info .name {
+ul.items li .name {
   font-weight: 700;
   font-size: 20px;
   color: #0a0202;
-  margin: 26% 0% 26% 5%;
   font-family: rockwell;
 }
 @media screen and (max-width: 900px) {
-  ul.items li .info .name {
-    margin: 0% 0% 26% 10%;
-  }
+  
 }
 ul.items li .info .info-bottom {
   position: absolute;
@@ -198,7 +198,7 @@ ul.items li .info .info-bottom .number .minus {
     padding: 0% 0% 5% 0%;
   }
 
-  ul.items li .info .name {
+  ul.items li .name {
     font-weight: bold;
     font-size: 14px;
   }
@@ -206,7 +206,7 @@ ul.items li .info .info-bottom .number .minus {
     width: 60%;
   }
 
-  ul.items li .info .name-bottom .count {
+  ul.items li .name-bottom .count {
     padding: 7px 10px 0 5px;
     font-size: 13px;
   }
@@ -365,14 +365,10 @@ footer button {
     width: 76%;
     padding: 0 4%;
   }
-  ul.items li .info .name {
-    margin: 5% 0% 26% 27%;
-  }
+  
 }
 @media screen and (max-width: 280px) {
-  ul.items li .info .name {
-    margin: -7% 0% 26% 27%;
-  }
+  
 }
 
 .popup input {
@@ -568,9 +564,7 @@ footer button {
   ul.items li .info {
     margin-top: -29%;
   }
-  ul.items li .name {
-    margin: -5% 0% 26% 27%;
-  }
+ 
 }
 .message p {
   font-family: Roboto;
@@ -621,4 +615,7 @@ footer button {
 .message .color {
   font-weight: bold;
   color: black;
+}
+.for-flex{
+  display: flex;
 }
